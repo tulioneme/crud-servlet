@@ -1,0 +1,4 @@
+model\Categoria.class
+dao\CategoriaDAO.class
+controller\InserirCategoria.class
+dao\Conexao.class

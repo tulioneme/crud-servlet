@@ -28,7 +28,8 @@ public class InserirCategoria extends HttpServlet {
     String retorno = dao.inserir(categoria);
 
     if (retorno.equals("Sucesso")) {
-      response.sendRedirect("InserirCategoria");
+      doGet(request, response);
+      // response.sendRedirect("InserirCategoria");
     } else {
       PrintWriter out = response.getWriter();
       out.print("<html>");
@@ -41,7 +42,6 @@ public class InserirCategoria extends HttpServlet {
 
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     try {
-      String action = request.getServletPath();
       listaCategoria(request, response);
     } catch (Exception ex) {
       throw new ServletException(ex);

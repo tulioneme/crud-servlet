@@ -12,18 +12,15 @@ public class CategoriaDAO {
   public String inserir(Categoria categoria) {
     String retorno = "Falha";
     Conexao conn = new Conexao();
-    System.out.println('0');
-    System.out.println(conn);
+
     try {
       Statement stmt = (Statement) conn.getConn().createStatement();
       stmt.execute("INSERT INTO categoria (nome) VALUES ('" + categoria.getNome() + "')");
       retorno = "Sucesso";
-      System.out.println('1');
+
     } catch (Exception e) {
-      System.out.println('2');
       e.printStackTrace();
     } finally {
-      System.out.println('3');
       conn.fecharConexao();
     }
     return retorno;

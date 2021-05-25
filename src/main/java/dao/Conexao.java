@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
-  private String driver = "com.mysql.jdbc.Driver";
-  private String URL = "jdbc:mysql://localhost/iec_crud?useTimezone=true&serveTimezone=UTC";
+  private String driver = "com.mysql.cj.jdbc.Driver";
+  private String URL = "jdbc:mysql://bdjavaee.southcentralus.cloudapp.azure.com/IEC_CRUD?useTimezone=true&serverTimezone=UTC";
   private String USER = "root";
-  private String SENHA = "123456";
+  private String SENHA = "root";
   private Connection conn;
 
   public Conexao() {
